@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tambahkan SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+        </header>
+        
+        <!-- Form untuk menambahkan tugas baru -->
+        <section class="task-entry">
+            <form id="todo-form">
+                <input 
+                    type="text" 
+                    id="new-task" 
+                    placeholder="Enter a new task" 
+                    required 
+                    aria-label="Enter new task"
+                />
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Daftar tugas yang ditambahkan -->
+        <section class="task-list">
+            <ul id="todo-list"></ul>
+        </section>
+
+        <!-- Filter untuk menampilkan semua, aktif, atau selesai -->
+        <section class="task-filters">
+            <h2>Filter Tasks</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
